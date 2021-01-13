@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import {Keyboard, Platform, StyleSheet, TextInput, View} from 'react-native';
 import {WebView} from 'react-native-webview';
 import {actions, messages} from './const';
-import {Dimensions, Keyboard, Platform, StyleSheet, TextInput, View} from 'react-native';
 import {createHTML} from './editor';
 
 const PlatformIOS = Platform.OS === 'ios';
@@ -49,7 +49,15 @@ export default class RichTextEditor extends Component {
         this._focus = false;
         that.selectionChangeListeners = [];
         const {
-            editorStyle: {backgroundColor, color, placeholderColor, cssText, contentCSSText} = {},
+            editorStyle: {
+                backgroundColor,
+                color,
+                placeholderColor,
+                initialCSSText,
+                customFontFamily,
+                cssText,
+                contentCSSText,
+            } = {},
             html,
             pasteAsPlainText,
             onPaste,
@@ -67,6 +75,8 @@ export default class RichTextEditor extends Component {
                         backgroundColor,
                         color,
                         placeholderColor,
+                        initialCSSText,
+                        customFontFamily,
                         cssText,
                         contentCSSText,
                         pasteAsPlainText,

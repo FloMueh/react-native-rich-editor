@@ -1,22 +1,28 @@
 {
-  "name": "react-native-pell-rich-editor",
+  "name": "@flomuehl/react-native-pell-rich-editor",
   "description": "React Native Rich Editor",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "main": "src/index.js",
-  "author": {
-    "name": "wxik",
-    "email": "stulip@126.com"
-  },
+  "author": "wxik <stulip@126.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wxik/react-native-rich-editor.git"
+    "url": "git+https://github.com/wxik/react-native-rich-editor.git"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "peerDependencies": {
     "react-native": ">=0.50.0",
     "react-native-webview": ">=7.5.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/wxik/react-native-rich-editor/issues"
+  },
+  "homepage": "https://github.com/wxik/react-native-rich-editor#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC"
 }

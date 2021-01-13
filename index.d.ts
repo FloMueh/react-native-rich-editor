@@ -1,6 +1,6 @@
-import {WebViewProps} from 'react-native-webview';
-import {ImageSourcePropType, StyleProp, ViewStyle} from 'react-native';
 import React from 'react';
+import {ImageSourcePropType, StyleProp, ViewStyle} from 'react-native';
+import {WebViewProps} from 'react-native-webview';
 
 /** The RichTextEditor accepts all props from Webview */
 export interface RichEditorProps extends WebViewProps {
@@ -117,6 +117,8 @@ export interface RichEditorProps extends WebViewProps {
         color?: string; // editor text color
         placeholderColor?: string; // editor placeholder text color
         contentCSSText?: string; // editor content css text
+        initialCSSText?: string; // editor inital css text, use for custom font-face etc
+        customFontFamily?: string; // editor custom font (maybe definied in your initialCSSText)
         cssText?: string; // editor global css text
     };
 }

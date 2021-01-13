@@ -22,6 +22,8 @@ function createHTML(options = {}) {
         color = '#000033',
         placeholderColor = '#a9a9a9',
         contentCSSText = '',
+        initialCSSText = '',
+        customFontFamily = '',
         cssText = '',
         pasteAsPlainText = false,
         pasteListener = false,
@@ -39,15 +41,15 @@ function createHTML(options = {}) {
 <head>
     <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <style>        
-        * {outline: 0px solid transparent;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-touch-callout: none;box-sizing: border-box;}
-        @font-face {
-            font-family: 'SFPro';
-            src: url('https://mobile-fonts.s3.eu-central-1.amazonaws.com/sf-pro-text-regular.ttf'),
-                 url('https://mobile-fonts.s3.eu-central-1.amazonaws.com/sf-pro-text-regular.ttf');
-        }
-        html, body { margin: 0; padding: 0;font-family: SFPro, Helvetica, sans-serif; font-size:1em;}
+        * {outline: 0px solid transparent;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-touch-callout: none;box-sizing: border-box;}        
+        ${initialCSSText}
+        html, body { margin: 0; padding: 0;font-family: ${
+            customFontFamily ? customFontFamily : 'Arial'
+        }, Helvetica, sans-serif; font-size:1em;}
         body { overflow-y: hidden; -webkit-overflow-scrolling: touch;height: 100%;background-color: ${backgroundColor};}
-        .content {font-family: SFPro, Helvetica, sans-serif;color: ${color}; width: 100%;height: 100%;-webkit-overflow-scrolling: touch;padding-left: 0;padding-right: 0;}
+        .content {font-family: ${
+            customFontFamily ? customFontFamily : 'Arial'
+        }, Helvetica, sans-serif;color: ${color}; width: 100%;height: 100%;-webkit-overflow-scrolling: touch;padding-left: 0;padding-right: 0;}
         .pell { height: 100%;} .pell-content { outline: 0; overflow-y: auto;padding: 10px;height: 100%;${contentCSSText}}
     </style>
     <style>
