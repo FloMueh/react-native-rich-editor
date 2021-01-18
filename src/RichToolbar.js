@@ -93,10 +93,16 @@ export default class RichToolbar extends Component {
     static getDerivedStateFromProps(nextProps, prevState) {
         const {actions} = nextProps;
         if (actions !== prevState.actions) {
-            let {selectedItems = []} = prevState;
+            let {data = []} = prevState;
+
             return {
                 actions,
-                data: actions.map((action) => ({action, selected: selectedItems.includes(action)})),
+                data: actions.map((action) => ({
+                    action,
+                    selected: data.some((x) => {
+                        return x.action === action && x.selected;
+                    }),
+                })),
             };
         }
         return null;

@@ -2,6 +2,13 @@
 
 All Credits by [wxik](https://github.com/wxik/react-native-rich-editor).
 
+# Changelog
+
+## 1.6.8
+
+fixed issue with onChange handler
+https://github.com/wxik/react-native-rich-editor/issues/141
+
 ## how to add custom font face from web source
 
 ```javascript
