@@ -1,12 +1,12 @@
 {
   "name": "@flomuehl/react-native-pell-rich-editor",
   "description": "React Native Rich Editor",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "main": "src/index.js",
-  "author": "wxik <stulip@126.com>",
+  "author": "Florian Mühlbacher",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wxik/react-native-rich-editor.git"
+    "url": "git+https://github.com/FloMueh/react-native-rich-editor.git"
   },
   "dependencies": {},
   "devDependencies": {},
